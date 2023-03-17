@@ -1,0 +1,5 @@
+# Each line is a file pattern followed by one or more owners.
+* @EliLillyCo/md-ids-infohub-sme
+template.yml @EliLillyCo/edb-administrator @EliLillyCo/edb-operations
+params*.json @EliLillyCo/edb-administrator @EliLillyCo/edb-operations
+CODEOWNERS @EliLillyCo/edb-administrator
