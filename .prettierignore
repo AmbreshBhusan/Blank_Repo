@@ -1,0 +1,2 @@
+# Ignore Axway JSON files:
+functions/SharePointPull/Axway-swagger-defn.yml

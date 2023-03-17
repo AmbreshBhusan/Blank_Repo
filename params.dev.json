@@ -1,0 +1,20 @@
+{
+  "Parameters": {},
+  "Tags": {
+    "DeployEnvironment": "dev",
+    "AppName": "edb-Branch_protection_Rule",
+    "CostCenter": "100ARAS",
+    "CostCenterApprover": "supancik_kent_a@lilly.com",
+    "SystemOwner": "morgan_jason_l@lilly.com",
+    "SystemCustodian": "sahoo_krushna_chandra@lilly.com",
+    "PrimaryItContact": "mishra_prabhat_kumar@lilly.com",
+    "Level1BusinessArea": "MD IDS",
+    "ProjectCenter": "100ACRW",
+    "DataClassification": "CHANGEIT",
+    "Hipaa": "No",
+    "SourceGitRepo": "Branch_protection_Rule",
+    "ApproverGroup": "MDITLAKE-RESPGOVBRD-LRLIT-GLB-APPROVERS",
+    "ApplicationCi": "CI00000029608321"
+  },
+  "StackPolicy": {}
+}

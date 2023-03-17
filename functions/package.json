@@ -1,0 +1,6 @@
+{
+  "name": "mdids-ihub-github-repo-initializer",
+  "version": "1.0.0",
+  "description": "App to initialize github repo as per MD IDS standards",
+  "main": "index.js"
+}

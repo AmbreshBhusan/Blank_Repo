@@ -1,0 +1,37 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+      python: latest
+    commands:
+      - echo "Starting install - $(date)"
+
+      - echo "Installing AWS SAM CLI"
+      - pip install aws-sam-cli
+      - pip install jq
+
+      - echo "Completed install - $(date) "
+  pre_build:
+    commands:
+      - echo "Starting pre_build - $(date)"
+      - echo "Completed pre_build - $(date)"
+  build:
+    commands:
+      - echo "Starting build - $(date)"
+      - echo "Copying Cirrus Authenticators template from S3"
+
+      - sam build --template-file ${TEMPLATE_PATH}
+      ### YOU MUST SPECIFY A KMS KEY TO USE WHEN PACKAGING YOUR TEMPLATE ###
+      - sam package --template-file .aws-sam/build/template.yaml --kms-key-id alias/aws/s3 --s3-bucket ${S3_DEPLOY_BUCKET} --output-template-file ${TEMPLATE_PATH}
+
+      - echo "Completed build - $(date)"
+  post_build:
+    commands:
+      - echo "Starting post_build - $(date)"
+      - echo "Completed post_build - $(date)"
+artifacts:
+  files:
+    - ${TEMPLATE_PATH}
+    - ${PARAMETER_FILE_NAME}
+  discard-paths: no
